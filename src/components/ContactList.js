@@ -7,13 +7,7 @@ const ContactList = (props)=>{
         props.getContactId(id);
     }
 
-    const contacts = [{
-        id: 1,
-        name: "sivam",
-        email: "sivams20@gmail.com"
-    }]
-
-    const contactList = contacts.map((contact)=>{
+    const contactList = props.contacts.map((contact)=>{
         return(
             <ContactCard contact={contact} clickHandler={deleteContactHandler} />
         );
